@@ -1,9 +1,9 @@
 # Prep Hub — AI / GenAI Internship Roadmap
 
-A responsive, single-page checklist based on an AI/GenAI internship skill target. It includes:
+A responsive, single-page checklist based on an AI/GenAI internship skill target. It tracks to-do items and progress; it does not host lessons. It includes:
 
 - Overall completion percentage and Basic/Core/Pro progress bars
-- Seven collapsible learning phases and project milestones
+- Eight collapsible checklist phases, including dedicated Python and PostgreSQL/SQL task lists
 - Search, All / To do / Completed filters, and a next-task shortcut
 - Custom tasks
 - Automatic progress saving in the current browser (`localStorage`)

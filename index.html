@@ -289,7 +289,7 @@
         <nav class="breadcrumb" aria-label="Breadcrumb"><span>Prep Hub</span><span aria-hidden="true">/</span><span class="current">AI / GenAI Internship Roadmap</span></nav>
         <div class="eyebrow"><span class="eyebrow-dot"></span> PERSONAL LEARNING TRACKER</div>
         <h1 id="page-title">Build your AI internship skillset.</h1>
-        <p class="hero-copy">A practical roadmap based on your target <strong>AI / GenAI internship résumé</strong>—from Python and ML foundations to RAG, FastAPI, and shipping <strong>ApplyPilot</strong>. Learn each skill, prove it with a small deliverable, and track your progress as you go.</p>
+        <p class="hero-copy">A practical <strong>to-do list for your AI / GenAI internship target</strong>—from Python and PostgreSQL fundamentals to ML, RAG, FastAPI, and shipping <strong>ApplyPilot</strong>. Check off each skill only after you have practised it independently.</p>
         <div class="hero-meta">
           <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 1 4 17.5z"/><path d="M4 17.5A2.5 2.5 0 0 1 6.5 15H20M8 7h8M8 10h6" stroke-linecap="round"/></svg><span id="taskCountMeta">0 learning tasks</span></span>
           <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 14.8 8.7 21 9.6l-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9z" stroke-linejoin="round"/></svg><span>Project-first learning</span></span>
@@ -328,7 +328,7 @@
     <section class="workspace" id="roadmap">
       <div class="main-column">
         <div class="section-heading">
-          <div><h2>Your learning roadmap</h2><p>Check a task off only when you can do it without copying a tutorial.</p></div>
+          <div><h2>Your learning roadmap</h2><p>Check a task off when you can demonstrate it independently. Each row is an action item, not a lesson.</p></div>
           <div class="filters" role="group" aria-label="Filter tasks">
             <button class="filter-btn active" data-filter="all" type="button">All tasks</button>
             <button class="filter-btn" data-filter="todo" type="button">To do</button>
@@ -398,16 +398,36 @@
       const tierNames = { basic: 'Basic', core: 'Core', pro: 'Pro' };
       const phases = [
         {
-          id: 'foundation', number: '01', title: 'Developer foundations', badge: 'START HERE',
-          description: 'The everyday tools that keep your learning and code organised.',
+          id: 'python', number: '01', title: 'Python programming fundamentals', badge: 'PYTHON CORE',
+          description: 'Build the Python language fundamentals you need before libraries, ML models, APIs, or automation.',
+          resources: [
+            { label: 'Python tutorial', url: 'https://docs.python.org/3/tutorial/' }
+          ],
+          tasks: [
+            { id: 'py-env', title: 'Set up Python, venv, pip, and a project dependency file', description: 'Create and activate a virtual environment, install a package, and record dependencies so the project is reproducible.', tier: 'basic', time: '45 min' },
+            { id: 'py-syntax', title: 'Practise variables, data types, operators, and input/output', description: 'Work with strings, numbers, booleans, None, type conversion, comparisons, and formatted strings.', tier: 'basic', time: '1–2 hr' },
+            { id: 'py-control', title: 'Use conditions and loops confidently', description: 'Write if/elif/else logic and for/while loops; use break, continue, and range in small exercises.', tier: 'basic', time: '1–2 hr' },
+            { id: 'py-functions', title: 'Write reusable functions', description: 'Practise parameters, return values, default arguments, keyword arguments, scope, and small single-purpose functions.', tier: 'basic', time: '1–2 hr' },
+            { id: 'py-collections', title: 'Work with lists, tuples, sets, and dictionaries', description: 'Choose the right collection, update it safely, iterate through it, and use common methods.', tier: 'basic', time: '2 hr' },
+            { id: 'py-strings', title: 'Practise string processing and formatting', description: 'Use slicing, common string methods, f-strings, splitting, joining, and whitespace normalisation.', tier: 'basic', time: '1 hr' },
+            { id: 'py-comprehensions', title: 'Use comprehensions and unpacking appropriately', description: 'Write list/dictionary comprehensions, enumerate, zip, and unpacking; prefer readability over clever one-liners.', tier: 'core', time: '1–2 hr' },
+            { id: 'py-files-json', title: 'Read and write files and JSON', description: 'Use pathlib and context managers to read/write text and JSON; handle missing or malformed files.', tier: 'core', time: '1–2 hr' },
+            { id: 'py-exceptions', title: 'Handle exceptions and invalid input', description: 'Use try/except/else/finally intentionally, raise helpful errors, and avoid swallowing exceptions silently.', tier: 'core', time: '1–2 hr' },
+            { id: 'py-modules', title: 'Organise code with modules, packages, and imports', description: 'Split a script into modules, understand import paths, and keep reusable logic separate from entry-point code.', tier: 'core', time: '1–2 hr' },
+            { id: 'py-oop', title: 'Understand classes, objects, and basic OOP', description: 'Create a small class with __init__, instance attributes, and methods; know when a simple function is enough.', tier: 'core', time: '2 hr' },
+            { id: 'py-type-hints', title: 'Add useful type hints and docstrings', description: 'Annotate function inputs and outputs, use common collection types, and document non-obvious behaviour.', tier: 'core', time: '1 hr' },
+            { id: 'py-debugging', title: 'Debug a Python program without guessing', description: 'Read tracebacks, use breakpoints or logging, reproduce a bug, and verify the fix with a small test.', tier: 'pro', time: '1–2 hr' }
+          ]
+        },
+        {
+          id: 'foundation', number: '02', title: 'Developer workflow and data handling', badge: 'TOOLS + DATA',
+          description: 'Use the everyday tools and data libraries that support your AI/GenAI work.',
           resources: [
             { label: 'Python docs', url: 'https://docs.python.org/3/tutorial/' },
             { label: 'Git handbook', url: 'https://guides.github.com/introduction/git-handbook/' },
             { label: 'HTTP basics', url: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview' }
           ],
           tasks: [
-            { id: 'py-env', title: 'Create a clean Python project environment', description: 'Use venv, install dependencies, and record them in a reproducible dependency file.', tier: 'basic', time: '45 min' },
-            { id: 'py-modules', title: 'Practise modules, imports, exceptions, and file paths', description: 'Split a small script into modules; handle missing files and invalid input gracefully.', tier: 'basic', time: '1–2 hr' },
             { id: 'git-workflow', title: 'Use Git confidently for a personal project', description: 'Practise commits, branches, merge conflicts, .gitignore, README files, and GitHub pushes.', tier: 'basic', time: '1–2 hr' },
             { id: 'http-json', title: 'Understand HTTP requests and JSON responses', description: 'Know methods, headers, query parameters, status codes, and how to parse nested JSON.', tier: 'basic', time: '1 hr' },
             { id: 'http-failures', title: 'Write a resilient HTTP client', description: 'Use timeouts, exception handling, basic retries, and clear handling for 4xx/5xx responses.', tier: 'basic', time: '1–2 hr' },
@@ -417,7 +437,7 @@
           ]
         },
         {
-          id: 'ml', number: '02', title: 'Machine learning foundations', badge: 'ML CORE',
+          id: 'ml', number: '03', title: 'Machine learning foundations', badge: 'ML CORE',
           description: 'Build sound ML habits before reaching for a model or framework.',
           resources: [
             { label: 'scikit-learn guide', url: 'https://scikit-learn.org/stable/user_guide.html' },
@@ -436,26 +456,32 @@
           ]
         },
         {
-          id: 'backend', number: '03', title: 'Backend engineering and SQL', badge: 'BUILD APIS',
-          description: 'Turn scripts and notebooks into reliable services and persistent applications.',
+          id: 'backend', number: '04', title: 'Backend, SQL, and PostgreSQL', badge: 'DATABASES + APIS',
+          description: 'Learn relational databases and SQL explicitly, then connect PostgreSQL to a reliable API.',
           resources: [
             { label: 'FastAPI tutorial', url: 'https://fastapi.tiangolo.com/tutorial/' },
             { label: 'PostgreSQL tutorial', url: 'https://www.postgresql.org/docs/current/tutorial.html' },
             { label: 'pytest docs', url: 'https://docs.pytest.org/en/stable/' }
           ],
           tasks: [
-            { id: 'sql-crud', title: 'Practise SQL CRUD and filtering', description: 'Write SELECT, INSERT, UPDATE, DELETE, WHERE, ORDER BY, and aggregate queries.', tier: 'basic', time: '2 hr' },
-            { id: 'sql-joins', title: 'Write JOINs and group related records', description: 'Join company, job, and application-like tables; use GROUP BY and understand NULL values.', tier: 'core', time: '2 hr' },
-            { id: 'sql-schema', title: 'Design a relational schema with constraints', description: 'Choose primary/foreign keys, uniqueness rules, and indexes for jobs and applications.', tier: 'core', time: '2 hr' },
+            { id: 'pg-setup', title: 'Install or access PostgreSQL and connect with psql', description: 'Start a local database, connect with psql or a database client, and create a practice database and role.', tier: 'basic', time: '1–2 hr' },
+            { id: 'pg-tables-types', title: 'Understand tables, rows, columns, and PostgreSQL data types', description: 'Create tables and choose appropriate types for text, numbers, booleans, dates, timestamps, and IDs.', tier: 'basic', time: '1–2 hr' },
+            { id: 'sql-crud', title: 'Practise SQL CRUD, filtering, sorting, and limits', description: 'Write SELECT, INSERT, UPDATE, DELETE, WHERE, ORDER BY, LIMIT, and aggregate queries against sample data.', tier: 'basic', time: '2 hr' },
+            { id: 'sql-joins', title: 'Write JOINs and grouped queries', description: 'Practise INNER/LEFT JOIN, GROUP BY, HAVING, COUNT, SUM, and handling NULL values.', tier: 'core', time: '2 hr' },
+            { id: 'sql-schema', title: 'Design related tables with keys and constraints', description: 'Use primary keys, foreign keys, NOT NULL, UNIQUE, CHECK constraints, and sensible relationships for users, jobs, and applications.', tier: 'core', time: '2 hr' },
+            { id: 'sql-normalisation', title: 'Understand normalisation and avoid duplicated data', description: 'Separate related entities into tables and explain how the design prevents update and deletion anomalies.', tier: 'core', time: '1–2 hr' },
+            { id: 'sql-transactions', title: 'Use transactions and understand ACID basics', description: 'Practise BEGIN, COMMIT, and ROLLBACK and explain why a group of related changes may need to succeed together.', tier: 'core', time: '1–2 hr' },
+            { id: 'sql-indexes', title: 'Learn indexes and inspect a query plan', description: 'Create a simple index and use EXPLAIN to see how PostgreSQL plans a query; understand indexes are not free.', tier: 'pro', time: '1–2 hr' },
+            { id: 'sql-safe', title: 'Use parameterised queries and avoid SQL injection', description: 'Never build SQL by concatenating user input; use parameters in your Python database layer.', tier: 'pro', time: '1 hr' },
             { id: 'fastapi-routes', title: 'Create FastAPI routes and Pydantic models', description: 'Validate request bodies and return consistent response models and status codes.', tier: 'core', time: '2 hr' },
             { id: 'rest-crud', title: 'Build a small REST CRUD API', description: 'Implement create, list, detail, update, and delete endpoints with clear error responses.', tier: 'core', time: '3 hr' },
-            { id: 'db-orm', title: 'Connect FastAPI to PostgreSQL', description: 'Use a database layer or ORM, handle transactions, and add migrations when ready.', tier: 'pro', time: '3–4 hr' },
+            { id: 'db-orm', title: 'Connect FastAPI to PostgreSQL and manage schema changes', description: 'Use a database driver or ORM, manage transactions and connections, and practise migrations when the schema changes.', tier: 'pro', time: '3–4 hr' },
             { id: 'api-testing', title: 'Test endpoints and important failure cases', description: 'Use pytest or FastAPI TestClient to test validation, missing records, and successful requests.', tier: 'pro', time: '2 hr' },
             { id: 'api-security', title: 'Learn baseline API security practices', description: 'Keep secrets in environment variables; validate inputs; understand authentication and authorisation.', tier: 'pro', time: '1–2 hr' }
           ]
         },
         {
-          id: 'genai', number: '04', title: 'Generative AI and LLM APIs', badge: 'GENAI',
+          id: 'genai', number: '05', title: 'Generative AI and LLM APIs', badge: 'GENAI',
           description: 'Understand the moving parts behind an LLM-powered application.',
           resources: [
             { label: 'Hugging Face course', url: 'https://huggingface.co/learn' },
@@ -472,7 +498,7 @@
           ]
         },
         {
-          id: 'rag', number: '05', title: 'RAG and document question answering', badge: 'RETRIEVAL',
+          id: 'rag', number: '06', title: 'RAG and document question answering', badge: 'RETRIEVAL',
           description: 'Connect answers to source documents rather than relying on model memory alone.',
           resources: [
             { label: 'Chroma docs', url: 'https://docs.trychroma.com/' },
@@ -490,7 +516,7 @@
           ]
         },
         {
-          id: 'projects', number: '06', title: 'Portfolio projects that prove the skills', badge: 'SHOW YOUR WORK',
+          id: 'projects', number: '07', title: 'Portfolio projects that prove the skills', badge: 'SHOW YOUR WORK',
           description: 'Build the résumé projects and connect them into one strong, usable product.',
           resources: [
             { label: 'Greenhouse job board API', url: 'https://developers.greenhouse.io/job-board.html' },
@@ -509,7 +535,7 @@
           ]
         },
         {
-          id: 'ship', number: '07', title: 'Testing, deployment, and MLOps basics', badge: 'SHIP IT',
+          id: 'ship', number: '08', title: 'Testing, deployment, and MLOps basics', badge: 'SHIP IT',
           description: 'Make the project reproducible, observable, and accessible outside your laptop.',
           resources: [
             { label: 'GitHub Pages', url: 'https://docs.github.com/en/pages' },
@@ -530,7 +556,7 @@
 
       const $ = (selector, root = document) => root.querySelector(selector);
       const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
-      const state = { completed: new Set(), customTasks: [], filter: 'all', query: '', openPhases: new Set(['foundation']), lastUpdated: null };
+      const state = { completed: new Set(), customTasks: [], filter: 'all', query: '', openPhases: new Set(['python']), lastUpdated: null };
       let toastTimer;
 
       function escapeHTML(value) {
